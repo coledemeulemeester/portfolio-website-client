@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // FIREBASE INIT
 // Import the functions you need from the SDKs you need
@@ -35,7 +36,9 @@ const analytics = getAnalytics(app);
 // NORMAL CODE
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
