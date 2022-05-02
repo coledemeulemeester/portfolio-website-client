@@ -55,11 +55,14 @@ function About() {
               </Card>
 
               {/* Music */}
+
+
               <Card>
                 <Card.Body>
                   <Card.Title>Spotify</Card.Title>
                   <CardGroup>
                     {/* todo: add title + see more link */}
+                    {/* <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2V4Q4KnBI72j4sO8LTb59S?utm_source=generator" width="250" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> */}
 
                     <Card>
                       {/* todo: add spotify playlist images */}
@@ -67,6 +70,7 @@ function About() {
                       <Card.Body>
                         <Card.Title>rh rn</Card.Title>
                         <Card.Subtitle>right here, right now</Card.Subtitle>
+
                       </Card.Body>
                       <Card.Footer className="text-muted">Last updated 3 mins ago</Card.Footer>
                     </Card>
@@ -141,7 +145,7 @@ function About() {
 
 
 
-    </div>
+    </div >
   );
 }
 
