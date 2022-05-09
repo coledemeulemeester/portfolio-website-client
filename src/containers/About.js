@@ -1,54 +1,15 @@
 import './About.css';
-import { Button, Card, Navbar, Nav, Container, Offcanvas, NavDropdown, Form, FormControl, Row, Col, Image, CardGroup } from "react-bootstrap"; //update to specifics
+import { Card, Nav, Image, CardGroup } from "react-bootstrap"; //update to specifics
 import "bootstrap/dist/css/bootstrap.min.css";
 import XpCard from "../components/XpCard";
 import { LinkContainer } from "react-router-bootstrap";
+import { experienceData } from '../experience';
 
 let experiences = [
-
-  {
-    "company": "RateMyMajor",
-    "link": "https://www.figma.com/proto/lmxQQOFHFgWufxP8pBdtfd/HCI-Group-14?node-id=327%3A25472&scaling=min-zoom&page-id=327%3A12030&starting-point-node-id=327%3A25472",
-    "date": "Oct 2020 - Dec 2020",
-    "title": "Product Designer, User Researcher",
-    "logo": "",
-    "bullets": [
-      "Human Computer Interaction final project",
-      "- 1st Place Final Project (\"The Shut-Up-And-Take-My-Money Award\")",
-      "- Collaborated with Jalil Evans, Julia Kelly, and Veronica Wertz",
-      "",
-    ],
-  },
-
-  {
-    "company": "Juni Learning",
-    "link": "",
-    "date": "Jun 2019 - May 2021",
-    "title": "Product & Business Development Associate",
-    "logo": "https://junilearning.com/static/juni_logo_preview-101e7872d58e53d7323d24502e7ff973.png",
-    "bullets": [
-      "▪ Overhauled instructor recruitment process by designing top-of-funnel recruitment strategy, leading campus ambassador initiative, advising recruitment pipeline project, reaching 10,000+ prospective instructors, directly hiring 100+ instructors and reducing total interview timeline by 50+%, respectively",
-      "▪ Interviewed 12 Juni and non-Juni affiliated instructors, analyzed 1,100+ instructor applications and researched 90+ target universities to identify competitive advantages, pipeline bottlenecks and target instructor saturation",
-      "▪ Project-managed and hosted fall open house reaching 200 prospective parent families within first 3 events and coordinated Marketing, Sales, Curriculum subteams while interfacing directly with CEO, CTO and COO",
-      "▪ Interviewed 40+ instructor applicants and virtually taught 100+ students in private and small group classrooms, connecting with diverse personalities and learning styles to convey course content and foster community when possible",
-    ],
-  },
-
-  {
-    "company": "Ridgeline",
-    "link": "",
-    "date": "Jun 2021 - Aug 2021",
-    "title": "Product Engineer Intern",
-    "logo": "https://global-uploads.webflow.com/6126ab68c73f925bdc355c97/619ce9b385a3c90b19d7c640_Logo.svg",
-    "bullets": [
-      "▪ Designed and developed go-live, full-stack feature enabling automated retrieval of external emails and internal CRM logging",
-      "▪ Designed core data model leveraging NoSQL architecture to index across 8 unique fields and scale for millions of entries",
-      "▪ Implemented back-end APIs in Python and front-end webpages using React for users to interface with email data",
-      "",
-    ],
-  },
-
-];
+  experienceData[Math.floor(Math.random() * experienceData.length)],
+  experienceData[Math.floor(Math.random() * experienceData.length)],
+  experienceData[Math.floor(Math.random() * experienceData.length)],
+]
 
 function About() {
   return (
@@ -125,11 +86,7 @@ function About() {
                   <>{
                     experiences.map((experience, index) =>
                       <XpCard
-                        logo={experience["logo"]}
-                        company={experience["company"]}
-                        date={experience["date"]}
-                        bullets={experience["bullets"]}
-                        link={experience["link"]}
+                        experienceId={index}
                       ></XpCard>
                     )
                   }</>

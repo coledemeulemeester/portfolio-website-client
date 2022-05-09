@@ -1,30 +1,19 @@
 import { Image } from "react-bootstrap";
 import './XpCard.css';
-
-
+import { experienceData } from '../experience';
 
 export default function XpCard({
-  logo,
-  company,
-  date,
-  bullets,
-  link,
-  // likes,
-  // views,
-  // actions,
+  experienceId,
 }) {
   return (
     <div class="card">
-      {/* <div class="xp-img"> */}
-      {/* <img src={logo} variant="top" class="img-fluid" alt="Responsive image"> </img> */}
 
-      <Image class="xp-img" variant="top" src={logo}></Image>
-      {/* </div> */}
+      <Image class="xp-img" variant="top" src={experienceData[experienceId]["logo"]}></Image>
       <div class="card-body">
-        <h5 class="card-title">{company}</h5>
+        <h5 class="card-title">{experienceData[experienceId]["company"]}</h5>
         <div class="bullet-container">
           <div class="xp-bullets">{
-            bullets.map(bullet => <p>{bullet}</p>)
+            experienceData[experienceId]["bullets"].map(bullet => <p>{bullet}</p>)
           }</div>
           <div class="overlay"></div>
         </div>
@@ -32,13 +21,13 @@ export default function XpCard({
 
         <div class="xp-footer">
           <div class="xp-footer-spacing">
-            <h5>{date}</h5>
+            <h5>{experienceData[experienceId]["date"]}</h5>
           </div>
           <div class="xp-footer-spacing see-more">
-            {link && link != "" && <a class="see-more" href={link}>See More {'>'}</a>}
-
+            {experienceData[experienceId]["link"] && experienceData[experienceId]["link"] != "" && <a class="see-more" href={experienceData[experienceId]["link"]}>See Project {'>'}</a>}
           </div>
         </div>
+        <a href={"experience/" + experienceId} class="btn btn-primary stretched-link">Read More {'>'}</a>
 
       </div>
     </div>
