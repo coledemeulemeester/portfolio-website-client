@@ -1,21 +1,9 @@
 import './Music.css';
-import { Button, Card, Navbar, Nav, Container, Offcanvas, NavDropdown, Form, FormControl, Row, Col, Image, CardGroup } from "react-bootstrap"; //update to specifics
+import { Card, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Sidebar from "../components/Sidebar.js";
-// import XpCard from "../components/XpCard";
-// "\src\components\XpCard.js"
 
 
 function Music() {
-
-  // window.onSpotifyIframeApiReady = (IFrameAPI) => {
-  //   let element = document.getElementById('embed-iframe');
-  //   let options = {
-  //     uri: 'spotify:episode:7makk4oTQel546B0PZlDM5'
-  //   };
-  //   let callback = (EmbedController) => { };
-  //   IFrameAPI.createController(element, options, callback);
-  // };
 
   return (
     <div className="Music">
@@ -23,6 +11,9 @@ function Music() {
       <Container>
         <div class='row'>
           <h2>Music</h2>
+        </div>
+        <div class='row'>
+          <p>As someone 'with a soundtrack for everything I do,' it's imperitive that I show you some of my favorite collections, current songs, favorite artists, and more!</p>
         </div>
         <div class="row">
           {/* COL 1 */}

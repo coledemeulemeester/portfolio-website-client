@@ -7,19 +7,33 @@ import "./App.css";
 import Routes from "./Routes";
 import { Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import { useHistory } from "react-router-dom";
 
 function App() {
+
+  const history = useHistory();
+
+
 
 
   return (
     <div className="App container py-3">
 
       <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
-        <LinkContainer to="/">
-          <Navbar.Brand className="font-weight-bold text-muted">
-            Cole DeMeulemeester
-          </Navbar.Brand>
-        </LinkContainer>
+        <Nav.Link className="justify-content-start">
+          <a onClick={() => history.goBack()}>{'<<<'}</a>
+        </Nav.Link>
+
+
+        <div className="navbar-header">
+          <LinkContainer to="/">
+            <Navbar.Brand className="font-weight-bold text-muted text-center">
+              Cole DeMeulemeester
+            </Navbar.Brand>
+          </LinkContainer>
+        </div>
+
+
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Nav activeKey={window.location.pathname}>

@@ -17,6 +17,8 @@ export default function XpCard({
           }</div>
           <div class="overlay"></div>
         </div>
+        <a href={"experience/" + experienceId} class="stretched-link">click card to read more {'>'}</a>
+
 
 
         <div class="xp-footer">
@@ -27,7 +29,6 @@ export default function XpCard({
             {experienceData[experienceId]["link"] && experienceData[experienceId]["link"] != "" && <a class="see-more" href={experienceData[experienceId]["link"]}>See Project {'>'}</a>}
           </div>
         </div>
-        <a href={"experience/" + experienceId} class="btn btn-primary stretched-link">Read More {'>'}</a>
 
       </div>
     </div>
