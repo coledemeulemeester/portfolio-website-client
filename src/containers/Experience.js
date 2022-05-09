@@ -4,9 +4,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import Sidebar from "../components/Sidebar.js";
 import XpCard from "../components/XpCard";
 // "\src\components\XpCard.js"
+import React, { useState } from 'react';
+import { Modal } from 'bootstrap';
+
 
 
 function Experience() {
+  const [selectedExperience, setSelectedExperience] = useState({});
+  // const handleChange = (e) => {
+  //   let updatedValue = {};
+  //   updatedValue = { item1: e.target.value };
+  //   setSelectedExperience(shopCart => ({
+  //     ...shopCart,
+  //     ...updatedValue
+  //   }));
+  // }
+
   let experiences1 = [
     {
       "company": "Juni Learning",
@@ -197,31 +210,49 @@ function Experience() {
   ];
 
 
-
   return (
     <div className="Experience">
+
+      {/* <SimpleModal show={this.state.show} onClose={() => { this.setState({ show: false }) }} /> */}
 
       <Container>
 
         <div class="row">
           {/* COL 1 */}
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 stdstyle">
             <>{
               experiences1.map((experience, index) =>
-                <XpCard
-                  logo={experience["logo"]}
-                  company={experience["company"]}
-                  date={experience["date"]}
-                  bullets={experience["bullets"]}
-                  link={experience["link"]}
-                ></XpCard>
+                <>
+                  <XpCard
+                    logo={experience["logo"]}
+                    company={experience["company"]}
+                    date={experience["date"]}
+                    bullets={experience["bullets"]}
+                    link={experience["link"]}
+
+                  ></XpCard>
+                  <button onclick={e => setSelectedExperience(
+                    {
+                      "logo": experience["logo"],
+                      "company": experience["company"],
+                      "data": experience["date"],
+                      "bullets": experience["bullets"],
+                      "link": experience["link"],
+                    }
+                  )}
+                    data-toggle="modal" data-target="#exampleModal"
+                  >Click me</button>
+
+                </>
               )
-            }</>
+            }
+
+            </>
 
           </div>
 
           {/* COL 2 */}
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 stdstyle">
             <>{
               experiences2.map((experience, index) =>
                 <XpCard
@@ -237,7 +268,7 @@ function Experience() {
 
 
           {/* COL 3 */}
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 stdstyle">
             <>{
               experiences3.map((experience, index) =>
                 <XpCard
@@ -249,6 +280,36 @@ function Experience() {
                 ></XpCard>
               )
             }</>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <>{
+
+          }</>
+          <div class="col-12 col-md-4 stdstyle">
+            <>{
+              experiences1.map((experience, index) =>
+                <>
+                  <XpCard
+                    logo={experience["logo"]}
+                    company={experience["company"]}
+                    date={experience["date"]}
+                    bullets={experience["bullets"]}
+                    link={experience["link"]}
+
+                  ></XpCard>
+                </>
+              )
+            }
+            </>
+          </div>
+          <div class="col-12 col-md-4 stdstyle">
+          </div>
+          <div class="col-12 col-md-4 stdstyle">
+
           </div>
         </div>
 

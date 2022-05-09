@@ -1,17 +1,45 @@
 .xp-bullets {
-  max-height: 10rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.xp-img {
+  position: relative;
+  height: 10rem;
+  width: 100%;
+}
+
+.overlay {
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  position: absolute;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  z-index: 10;
+
+}
+
+.bullet-container {
+  width: 100%;
+  height: 10rem;
+  position: relative;
   overflow: hidden;
   padding-top: .5rem;
 }
 
 .xp-footer {
   padding-top: .5rem;
+  position: relative;
 
 }
 
 .see-more {
-  position: absolute;
-  right: 1rem;
+  margin-right: 0;
+}
+
+.xp-footer-spacing {
+  display: inline;
 }
 
 .xp-body {

@@ -4,10 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import XpCard from "../components/XpCard";
 import { LinkContainer } from "react-router-bootstrap";
 
-// import RateMyMajorPoster from '../assets/RateMyMajorPoster.svg'
-
-// import Sidebar from "../components/Sidebar.js";
-
 let experiences = [
 
   {
@@ -57,126 +53,92 @@ let experiences = [
 function About() {
   return (
     <div className="About">
-
-      {/* potensh add classname = "jansdjlansd" */}
-
-
       <main>
-        {/* DOING: GRID */}
-        <Container className="px-1 mx-5">
-          <Row className="px-1 my-4">
-            <Col sm={3}>
-              {/* headshot */}
-              <Card>
-                <Image src="https://res.cloudinary.com/campus-job/image/upload/t_student-public-page/v1/profile_pictures/ivp3ZydAio_20220320.jpg"
-                  fluid
-                  roundedCircle >
-                </Image>
-              </Card>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="headshot">
+              <Image src="https://res.cloudinary.com/campus-job/image/upload/t_student-public-page/v1/profile_pictures/ivp3ZydAio_20220320.jpg"
+                fluid
+                roundedCircle >
+              </Image>
+            </div>
 
-              {/* ROles of interest */}
-              <Card>
-                <Card.Body>
-                  <Card.Title>Fields of Interest</Card.Title>
-                  {/* add hyper links to resume experience */}
-                  <Card.Text>Product Management</Card.Text>
-                  <Card.Text>EShip</Card.Text>
-                  <Card.Text>SWE</Card.Text>
-                </Card.Body>
-              </Card>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Foods for Thought</Card.Title>
-                  {/* add hyper links to resume experience */}
-                  <Card.Text>thing 1</Card.Text>
-                  <Card.Text>thing 2</Card.Text>
-                  <Card.Text>thing 3</Card.Text>
-                </Card.Body>
-              </Card>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Fields of Interest</h5>
+                <p class="card-text">Product Management</p>
+                <p class="card-text">EShip</p>
+                <p class="card-text">SWE</p>
+                <a href="experience" class="btn btn-primary">See Experience</a>
+              </div>
+            </div>
 
-              {/* Foods for thoughts */}
-            </Col>
-            <Col sm={9}>
-              {/* ABOUT BLURB */}
-              <Card>
-                <Card.Body>
-                  <Card.Title>Hello there!</Card.Title>
-                  {/* (what am, what want...) */}
-                  <Card.Text>A growing engineer + lifelong adventurer. Excited by Aboutlying technology to make everyday human needs more efficient, and passionate about making everyday life more meaningful.</Card.Text>
-                  {/* (ACOLADES) */}
-                  <Card.Text> Product and Software experience w/ skills in human-centered design, prototyping (figma, usability testing), mvp development, full-stack (serverless, react bootstrap, python, java), mobile-dev (viper, swift).</Card.Text>
-                  {/* (fun)  */}
-                  <Card.Text>A few of my favorite adventures so far: Skiing Der Weiße Ring (White Ring), racing on the Bonneville Salt Flats, listening to Firefly Music Festival.</Card.Text>
-                </Card.Body>
-              </Card>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Education</h5>
+                <p class="card-text">Cornell</p>
+                <p class="card-text">Andover</p>
+              </div>
+            </div>
+          </div>
 
-              {/* Music */}
+          <div class="col-12 col-md-8">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Hello there!</h5>
+                <p class="card-text">A growing engineer + lifelong adventurer. Excited by Aboutlying technology to make everyday human needs more efficient, and passionate about making everyday life more meaningful.</p>
+                <p class="card-text">Product and Software experience w/ skills in human-centered design, prototyping (figma, usability testing), mvp development, full-stack (serverless, react bootstrap, python, java), mobile-dev (viper, swift).</p>
+                <p class="card-text">A few of my favorite adventures so far: Skiing Der Weiße Ring (White Ring), racing on the Bonneville Salt Flats, listening to Firefly Music Festival.</p>
+              </div>
+            </div>
 
+            <div class="card">
               <LinkContainer class="stretched-link" to="/music">
                 <Nav.Link>
-                  <Card>
-                    <Card.Body>
-                      <Card.Title>Spotify</Card.Title>
-                      <CardGroup>
-                        <Card>
-                          <iframe class="iframe1" src="https://open.spotify.com/embed/playlist/2V4Q4KnBI72j4sO8LTb59S?utm_source=generator" width="100%"
-                            height="80" frameborder="0" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                          {/* <Card.Body>
-                        <Card.Title>rh rn</Card.Title>
-                        <Card.Subtitle>right here, right now</Card.Subtitle>
-                      </Card.Body>
-                      <Card.Footer className="text-muted">Last updated 3 mins ago</Card.Footer> */}
-                        </Card>
-                        <Card>
-                          <iframe class="iframe1" src="https://open.spotify.com/embed/playlist/47c1bsZPYops5HOzfdcYRv?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                        </Card>
-                        <Card>
-                          <iframe class="iframe1" src="https://open.spotify.com/embed/playlist/1iuVKv8JbIQoMe59ENkUzF?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                        </Card>
-                      </CardGroup>
-                    </Card.Body>
-                  </Card>
+                  <div class="card-body">
+                    <h5 class="card-title">Spotify</h5>
+                    <div class="row">
+                      <div class="col-12 col-md-4">
+                        <iframe class="iframe1" src="https://open.spotify.com/embed/playlist/2V4Q4KnBI72j4sO8LTb59S?utm_source=generator" width="100%"
+                          height="80" frameborder="0" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <iframe class="iframe1" src="https://open.spotify.com/embed/playlist/47c1bsZPYops5HOzfdcYRv?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <iframe class="iframe1" src="https://open.spotify.com/embed/playlist/1iuVKv8JbIQoMe59ENkUzF?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                      </div>
+                    </div>
+                  </div>
                 </Nav.Link>
               </LinkContainer>
+            </div>
 
-
-              {/* Experience */}
-
-              <Card>
-
-                <Card.Body>
-                  <LinkContainer class="stretched-link" to="/experience">
-                    <Nav.Link>
-                      <Card.Title>Projects</Card.Title>
-                    </Nav.Link>
-                  </LinkContainer>
-                  <CardGroup>
-                    <>{
-                      experiences.map((experience, index) =>
-                        <XpCard
-                          logo={experience["logo"]}
-                          company={experience["company"]}
-                          date={experience["date"]}
-                          bullets={experience["bullets"]}
-                          link={experience["link"]}
-                        ></XpCard>
-                      )
-                    }</>
-                  </CardGroup>
-                </Card.Body>
-
-              </Card>
-
-            </Col>
-          </Row>
-        </Container>
-
-
-
+            <Card>
+              <Card.Body>
+                <LinkContainer class="stretched-link" to="/experience">
+                  <Nav.Link>
+                    <Card.Title>Projects</Card.Title>
+                  </Nav.Link>
+                </LinkContainer>
+                <CardGroup>
+                  <>{
+                    experiences.map((experience, index) =>
+                      <XpCard
+                        logo={experience["logo"]}
+                        company={experience["company"]}
+                        date={experience["date"]}
+                        bullets={experience["bullets"]}
+                        link={experience["link"]}
+                      ></XpCard>
+                    )
+                  }</>
+                </CardGroup>
+              </Card.Body>
+            </Card>
+          </div>
+        </div>
       </main>
-
-
-
     </div >
   );
 }
