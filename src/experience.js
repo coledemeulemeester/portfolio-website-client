@@ -84,10 +84,9 @@ export const experienceData = [
     "title": "Software Engineer Co-Op",
     "logo": "https://findvectorlogo.com/wp-content/uploads/2019/04/lutron-electronics-vector-logo.png",
     "bullets": [
-      "",
-      "",
-      "",
-      ""
+      "▪	Implemented feature reaching thousands of users on iOS app to view and manage connections with 42 smart-home brands",
+      "▪	Introduced VIPER architecture using Heroku cloud services and Swift to fetch account data and reflect connection status",
+      "▪	Demonstrated isolated component testing and future maintenance advantages to MVC and MVVM lifecycle design patterns",
     ]
   },
   {

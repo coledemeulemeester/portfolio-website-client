@@ -36,7 +36,7 @@ function About() {
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Education</h5>
-                <div class="media position-relative">
+                <div class="card">
                   <div class="seal">
                     <Image id="seal1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Cornell_University_seal.svg/1200px-Cornell_University_seal.svg.png" />
                   </div>
@@ -47,7 +47,7 @@ function About() {
                   </div>
                   <a href={"https://www.cornell.edu/"} class="stretched-link"></a>
                 </div>
-                <div class="media position-relative">
+                <div class="card">
                   <div class="seal">
                     <Image id="seal2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Phillips_Academy_seal.svg/1200px-Phillips_Academy_seal.svg.png" />
                   </div>
