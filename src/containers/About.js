@@ -1,8 +1,7 @@
 import './About.css';
-import { Card, Nav, Image, CardGroup } from "react-bootstrap"; //update to specifics
+import { Image } from "react-bootstrap"; //update to specifics
 import "bootstrap/dist/css/bootstrap.min.css";
 import XpCard from "../components/XpCard";
-import { LinkContainer } from "react-router-bootstrap";
 import { experienceData } from '../experience';
 
 let experiences = [
@@ -27,10 +26,10 @@ function About() {
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Fields of Interest</h5>
-                <p class="card-text">Product Management</p>
-                <p class="card-text">EShip</p>
-                <p class="card-text">SWE</p>
-                <a href="experience" class="btn btn-primary">See Experience</a>
+                <p class="card-text">- Product Management</p>
+                <p class="card-text">- EShip</p>
+                <p class="card-text">- SWE</p>
+                <a href="experience">See Experience {'>'}</a>
               </div>
             </div>
 
@@ -40,33 +39,29 @@ function About() {
                 <div class="media position-relative">
                   <div class="seal">
                     <Image id="seal1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Cornell_University_seal.svg/1200px-Cornell_University_seal.svg.png" />
-
                   </div>
                   <div class="media-body">
-                    <p>Cornell University</p>
-                    <p>B.S. Computer Science</p>
-                    <p>2018 - 2022</p>
+                    <h5>Cornell University</h5>
+                    <h6>B.S. Computer Science</h6>
+                    <h7>2018 - 2022</h7>
                   </div>
+                  <a href={"https://www.cornell.edu/"} class="stretched-link"></a>
                 </div>
                 <div class="media position-relative">
                   <div class="seal">
                     <Image id="seal2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Phillips_Academy_seal.svg/1200px-Phillips_Academy_seal.svg.png" />
-
                   </div>
                   <div class="media-body">
-                    <p>Phillips Academy Andover</p>
-                    <p>2014 - 2018</p>
+                    <h5>Phillips Academy Andover</h5>
+                    <h7>2014 - 2018</h7>
                   </div>
+                  <a href={"https://www.andover.edu/"} class="stretched-link"></a>
+
                 </div>
               </div>
 
             </div>
           </div>
-
-
-
-
-
           <div class="col-12 col-md-8">
             <div class="card">
               <div class="card-body">
@@ -77,34 +72,33 @@ function About() {
                 <p class="card-text">A few of my favorite adventures so far: Skiing Der Weiße Ring (White Ring), racing on the Bonneville Salt Flats, listening to Firefly Music Festival.</p>
               </div>
             </div>
-
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Spotify</h5>
                 <p>A few currations to encapsulate one of my favorite hobbies</p>
                 <div class="row">
-                  <div class="col-12 col-md-4">
+                  <a href={"music"} class="stretched-link"></a>
+                  <div class="col-12 col-md-4 ifrm">
                     <iframe class="iframe1" src="https://open.spotify.com/embed/playlist/2V4Q4KnBI72j4sO8LTb59S?utm_source=generator" width="100%"
                       height="80" frameborder="0" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                     <p>right here, right now</p>
                   </div>
-                  <div class="col-12 col-md-4">
+                  <div class="col-12 col-md-4 ifrm">
                     <iframe class="iframe1" src="https://open.spotify.com/embed/playlist/47c1bsZPYops5HOzfdcYRv?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                     <p>sounds to get the juice flowing</p>
                   </div>
-                  <div class="col-12 col-md-4">
+                  <div class="col-12 col-md-4 ifrm">
                     <iframe class="iframe1" src="https://open.spotify.com/embed/playlist/1iuVKv8JbIQoMe59ENkUzF?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                     <p>~alternative vibes~</p>
                   </div>
                 </div>
               </div>
-              <a href={"music"} class="stretched-link"></a>
             </div>
-
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Projects</h5>
-                <div class="card-group">
+                <a href={"experience"} class="stretched-link"></a>
+                <div class="card-group exp-card">
                   <>{
                     experiences.map((experience, index) =>
                       <XpCard
@@ -114,7 +108,6 @@ function About() {
                   }</>
                 </div>
               </div>
-              <a href={"experience"} class="stretched-link"></a>
             </div>
           </div>
         </div>

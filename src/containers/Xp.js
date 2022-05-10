@@ -1,7 +1,7 @@
-import './Experience.css';
 import { Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { experienceData } from '../experience';
+import './Xp.css';
 
 function Xp({
   match,
@@ -11,23 +11,32 @@ function Xp({
   return (
     <div className="Xp">
       <main>
-        <div class="card">
-          <Image class="xp-img" variant="top" src={experienceData[experienceId]["logo"]}></Image>
-          <div class="card-body">
-            <h5 class="card-title">{experienceData[experienceId]["company"]}</h5>
-            <div class="bullet-container">
-              <div class="xp-bullets">{
-                experienceData[experienceId]["bullets"].map(bullet => <p>{bullet}</p>)
-              }</div>
-              <div class="overlay"></div>
+        <div>
+          <div class="row xp-header">
+            <div class="col-6 col-md-4">
+              <Image src={experienceData[experienceId]["logo"]}></Image>
+
             </div>
+            <div class="col-6 col-md-8">
+              <h5 class="card-title">{experienceData[experienceId]["company"]}</h5>
+              <h6>{experienceData[experienceId]["title"]}</h6>
+              <h7>{experienceData[experienceId]["date"]}</h7>
+            </div>
+          </div>
+          <div >
+
+            <div>{
+              experienceData[experienceId]["bullets"].map(bullet => <ul>{bullet}</ul>)
+            }</div>
+
+
 
             <div class="xp-footer">
               <div class="xp-footer-spacing">
-                <h5>{experienceData[experienceId]["date"]}</h5>
+
               </div>
               <div class="xp-footer-spacing see-more">
-                {experienceData[experienceId]["link"] && experienceData[experienceId]["link"] != "" && <a class="see-more" href={experienceData[experienceId]["link"]}>See More {'>'}</a>}
+                {experienceData[experienceId]["link"] && experienceData[experienceId]["link"] !== "" && <a class="see-more" href={experienceData[experienceId]["link"]}>See Project {'>'}</a>}
 
               </div>
             </div>
@@ -35,9 +44,9 @@ function Xp({
           </div>
         </div>
 
-      </main>
+      </main >
 
-    </div>
+    </div >
   );
 }
 

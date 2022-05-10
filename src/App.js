@@ -20,8 +20,9 @@ function App() {
     <div className="App container py-3">
 
       <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
-        <Nav.Link className="justify-content-start">
-          <a onClick={() => history.goBack()}>{'<<<'}</a>
+        <Nav.Link className="justify-content-start" onClick={() => history.goBack()}>
+          {/* <a class="back-button" onClick={() => history.goBack()}>back</a> */}
+          back
         </Nav.Link>
 
 

@@ -130,19 +130,6 @@ export const experienceData = [
     ]
   },
   {
-    "company": "",
-    "link": "",
-    "date": "",
-    "title": "",
-    "logo": "",
-    "bullets": [
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
-  {
     "company": "Andover Cochran Bird Sanctuary Trail Surveying",
     "link": "",
     "date": "Aug 2016 - May 2017",
@@ -155,17 +142,5 @@ export const experienceData = [
       "- Recruited 10 volunteers and marked trails in Phillips Academy's Cochran Bird Sanctuary"
     ]
   },
-  {
-    "company": "",
-    "link": "",
-    "date": "",
-    "title": "",
-    "logo": "",
-    "bullets": [
-      "",
-      "",
-      "",
-      ""
-    ]
-  }
+
 ]
